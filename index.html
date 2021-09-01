@@ -6,14 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <!-- BootStrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
 </head>
 
 <body>
 
+    <div class="container">
+        <h2 class="text-center text-primary">Search your Favorite Books</h2>
+        <!-- Book search area -->
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input id="searchField" type="text" class="form-control" placeholder="Search the book you want"
+                aria-label="Book Name" aria-describedby="button-addon">
+            <button onclick="searchBook()" class="btn btn-success" type="button" id="searchButton">Search</button>
+        </div>
+        <div>
+            <h5 id="errorMessage" class=" text-danger text-center">No result found!</h5>
+        </div>
+
+        <!-- Number Of Books -->
+        <div>
+            <h3 id="numberOfBooks" class=" text-dark text-center bg-info">23 books Found out of 32</h3>
+        </div>
+
+        <!-- Book search result -->
+        <div id="searchResult" class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col" data-bs-toggle="modal" data-bs-target="#bookDetails">
+                <div class="card h-100">
+                    <img src=" https://covers.openlibrary.org/b/id/554106-M.jpg" class="card-img-top p-3" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><b>Javascript Book</b></h5>
+                        <p><b>Written By: </b><span class="text-primary">Gary B. Shelly, Thomas J. Cashman, William J.
+                                Dorin,Jeffrey,
+                                J.
+                                Quasney</span> </p>
+                        <p><b>Publicher: </b>Course Technology</p>
+                        <p><b>1st Publication year: </b>2000</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- single Book details -->
+
+        <div id="bookDetails" class="modal fade mx-auto" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title text-center"><b>Javascript Book</b></h5>
+                                <p><b>Written By: </b>Gary B. Shelly, Thomas J. Cashman, William
+                                    J.
+                                    Dorin,Jeffrey,
+                                    J.
+                                    Quasney
+
+                                </p>
+                                <p><b>Publicher: </b>Course Technology</p>
+                                <p><b>1st Publication year: </b>2000</p>
+                            </div>
+                        </div>
+
+                        <a class="btn btn-secondary mt-3 float-end" data-bs-dismiss="modal">Close</a>
+                        <a href="https://www.rokomari.com/" target="_blank"
+                            class="btn btn-info mt-3 mx-3 float-end">Order
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
 
+
+    <!-- My JS -->
     <script src="book.js"></script>
+    <!-- BootStrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
