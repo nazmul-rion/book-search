@@ -22,70 +22,30 @@
                 aria-label="Book Name" aria-describedby="button-addon">
             <button onclick="searchBook()" class="btn btn-success" type="button" id="searchButton">Search</button>
         </div>
+
+        <p id="spinner" class="text-center"><span class="spinner-border spinner-border-sm" role="status"
+                aria-hidden="true"></span>
+            Loading...</p>
+
+
         <div>
             <h5 id="errorMessage" class=" text-danger text-center">No result found!</h5>
         </div>
 
+        <div>
+            <h5 id="nullError" class=" text-danger text-center">please search something...</h5>
+        </div>
+
         <!-- Number Of Books -->
         <div>
-            <h3 id="numberOfBooks" class=" text-dark text-center bg-info">23 books Found out of 32</h3>
+            <h3 id="numberOfBooks" class=" text-dark text-center bg-info"><b>Total Found: </b>0</h3>
         </div>
 
         <!-- Book search result -->
         <div id="searchResult" class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col" data-bs-toggle="modal" data-bs-target="#bookDetails">
-                <div class="card h-100">
-                    <img src=" https://covers.openlibrary.org/b/id/554106-M.jpg" class="card-img-top p-3" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title text-center"><b>Javascript Book</b></h5>
-                        <p><b>Written By: </b><span class="text-primary">Gary B. Shelly, Thomas J. Cashman, William J.
-                                Dorin,Jeffrey,
-                                J.
-                                Quasney</span> </p>
-                        <p><b>Publicher: </b>Course Technology</p>
-                        <p><b>1st Publication year: </b>2000</p>
-                    </div>
-                </div>
-            </div>
 
         </div>
-
-
-        <!-- single Book details -->
-
-        <div id="bookDetails" class="modal fade mx-auto" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-body">
-
-                        <div class="card h-100">
-                            <div class="card-body">
-                                <h5 class="card-title text-center"><b>Javascript Book</b></h5>
-                                <p><b>Written By: </b>Gary B. Shelly, Thomas J. Cashman, William
-                                    J.
-                                    Dorin,Jeffrey,
-                                    J.
-                                    Quasney
-
-                                </p>
-                                <p><b>Publicher: </b>Course Technology</p>
-                                <p><b>1st Publication year: </b>2000</p>
-                            </div>
-                        </div>
-
-                        <a class="btn btn-secondary mt-3 float-end" data-bs-dismiss="modal">Close</a>
-                        <a href="https://www.rokomari.com/" target="_blank"
-                            class="btn btn-info mt-3 mx-3 float-end">Order
-                            Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-
-
-
 
     <!-- My JS -->
     <script src="book.js"></script>
