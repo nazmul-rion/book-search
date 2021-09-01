@@ -1,11 +1,7 @@
 const spinner = document.getElementById('spinner');
-spinner.style.display = "none";
 const errorMsg = document.getElementById('errorMessage');
-errorMsg.style.display = "none";
 const noOfBooks = document.getElementById('numberOfBooks');
-noOfBooks.style.display = "none";
 const nullError = document.getElementById('nullError');
-nullError.style.display = "none";
 const searchResult = document.getElementById('searchResult');
 const searchBook = async () => {
     const searchField = document.getElementById('searchField');
